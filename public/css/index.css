@@ -1,11 +1,13 @@
-.header1,
+/* BODY */
+
+header,
 main,
-.aside1,
+aside,
 footer,
-.nav1,
-section,
+nav,
 div,
 img,
+form,
 p,
 a,
 h1,
@@ -16,14 +18,13 @@ h5,
 h6 {
     display: block;
     box-sizing: border-box;
-    /* border: 1px solid black; */
     background-color: white;
     padding: 1rem;
 }
 
 .containerMainFooter,
 body,
-.aside1,
+aside,
 main,
 footer,
 section{
@@ -47,87 +48,16 @@ body {
     justify-content: flex-start;
 }
 
-.header1,
+header,
 main,
 footer {
     width: 100%;
     text-align: center;
 }
 
-/* BARRE DE NAVIGATION */
-
-.aside1 {
-    background-color: transparent;
-    flex : 1;
-    flex-basis: 20%;
-    position: sticky;
-    top: 0px;
-    height: 100vh;
-    margin-top: -3000px;
-    padding: 0;
-    border: 1rem solid transparent;
-}
-main {
-    flex: 11;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.imgProfil {
-    display: inline-block;
-    width: 195px;
-    height: 195px;
-    border-radius: 100%;
-    padding: 0px;
-    vertical-align: middle;
-    object-fit: cover;
-}
-
-.te {
-    text-decoration: none;
-    color: black;
-    border-radius: 100%;
-}
-.nav1 {
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    top: 1rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.lienNav {
-    text-decoration: none;
-    color: black;
-    margin: 0 auto;
-}
-.lienNav:hover {
-    background: black;
-    color: white;
-    width: 227px;
-}
-.iconLinkedin {
-    text-decoration: none;
-    color: #0077B7;
-    border: transparent;
-    padding: 0px;
-}
-.iconLinkedin:hover {
-    background: #0077B7;
-    color: white;
-}
-h4 {
-    border: transparent;
-    text-decoration: underline overline #0077B7;
-    font-size: 1.1rem;
-    margin: 0;
-}
-
 /* HEADER ET IMAGE */
 
-.header1 {
+header {
     background-image: url("../img/frontend/header-portfolio.jpg");
     background-size: cover;
     background-position: center;
@@ -135,24 +65,11 @@ h4 {
     display: flex;
     justify-content: flex-start;
     padding: 0;
-    /* margin-top: -493px; */
 }
 
 .textHeader {
     background: transparent;
     font-size: 1.5rem;
-    /* text-align: center; */
-}
-
-.inv {
-    min-width: 291px;
-    background-color: transparent;
-    flex : 1;
-    flex-basis: 20%;
-    position: sticky;
-    height: 100vh;
-    padding: 0;
-    border: 1rem solid transparent;
 }
 
 .head1 {
@@ -161,36 +78,35 @@ h4 {
 }
 
 /* MAIN */
+
+main {
+    flex: 11;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 1rem;
+}
+
 h2 {
     width: 100%;
-    /* padding-bottom: 0; */
-    /* margin-bottom: 0; */
 }
 
 .containerMainFooter {
     flex: 11;
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* flex-direction: column; */
-    /* flex-wrap: wrap */
-}
-
-#presentation {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .divItem {
-    width: 30%;
-    /* margin: 0.5rem; */
     flex: 1;
     flex-basis: 300px;
     text-align: center;
 }
-.siteItem {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .imgSite {
     width: 100%;
     display: block;
@@ -198,46 +114,130 @@ h2 {
 }
 /* FOOTER */
 
-.sectionFooter {
-    display: flex;
-    flex-wrap: wrap;
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
-#wrap {
-    font-family: sans-serif;
-    font-size: 21px;
-    line-height: 1.6;
-    margin: 0;
-    display: flex;
-    color: #f00;
-    transition: transform .4s cubic-bezier(.25, .1, .25, 1);
-  }
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-  #wrap:not(:target) {
-    transform: translate3d(-335px, 0, 0);
-  }
+input[type=submit]:hover {
+    background-color: #45a049;
+}
 
-  #wrap:target {
-    transform: translate3d(0, 0, 0);
-  }
+form {
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
 
-  #open,
-  #close {
-    height: 44px;
-    text-align: right;
-    display: block;
-    margin-right: -30px;
-  }
+@media screen and (max-width: 799px) {
+aside,nav, .inv, .imgProfil {
+    position: absolute;
+    top: -1000px;
+}
+}
 
-  #wrap:target #open,
-  #wrap:not(:target) #close {
-    display: none;
-  }
+@media screen and (min-width: 800px) {
 
-  #wrap:target #open {
-    display: none;
-  }
+    .testt {
+        position: absolute;
+        top: -200px;
+    }
 
-.message {
-    background-color: transparent;
+    /* HEADER */
+
+    .inv {
+        min-width: 291px;
+        background-color: transparent;
+        flex : 1;
+        flex-basis: 20%;
+        position: sticky;
+        height: 100vh;
+        padding: 0;
+        border: 1rem solid transparent;
+    }
+
+    /* BARRE DE NAVIGATION */
+
+    aside {
+        background-color: transparent;
+        flex : 1;
+        flex-basis: 20%;
+        position: sticky;
+        top: 0px;
+        height: 100vh;
+        margin-top: -3000px;
+        border: 1rem solid transparent;
+    }
+
+    .imgProfil {
+        display: inline-block;
+        width: 195px;
+        height: 195px;
+        border-radius: 100%;
+        padding: 0px;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+
+    .te {
+        text-decoration: none;
+        color: black;
+        border-radius: 100%;
+    }
+    nav {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        top: 1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .lienNav {
+        text-decoration: none;
+        color: black;
+        margin: 0 auto;
+    }
+
+    .lienNav:hover {
+        background: black;
+        color: white;
+        width: 227px;
+    }
+
+    .iconLinkedin {
+        text-decoration: none;
+        color: #0077B7;
+        border: transparent;
+        padding: 0px;
+    }
+
+    .iconLinkedin:hover {
+        background: #0077B7;
+        color: white;
+    }
+
+    h4 {
+        border: transparent;
+        text-decoration: underline overline #0077B7;
+        font-size: 1.1rem;
+        margin: 0;
+    }
 }

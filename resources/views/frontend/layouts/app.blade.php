@@ -19,8 +19,8 @@
         <!-- Check if the language is set to RTL, so apply the RTL layouts -->
         <!-- Otherwise apply the normal LTR layouts -->
         {{ style(mix('css/frontend.css')) }}
-
         @stack('after-styles')
+        @yield('style')
     </head>
     <body>
         @include('includes.partials.read-only')

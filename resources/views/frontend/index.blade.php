@@ -1,53 +1,36 @@
 @extends('frontend.layouts.app')
-
 @section('style')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
+@endsection
 
 @section('title', app_name() . ' | ' . __('navs.general.home'))
-
 @section('content')
-    <header class="header1" id="header001">
+    <header id="header001">
         <div class="inv"></div>
         <div class="head1">
-            {{-- <!--Navbar-->
-<nav class="navbar navbar-light bg-white">
-
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">Navbar</a>
-
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
-          aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent15">
-
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-          </ul>
-          <!-- Links -->
-
-        </div>
-        <!-- Collapsible content -->
-
-      </nav>
-      <!--/.Navbar--> --}}
-
+            <div class="navbar navbar-light bg-white testt">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <p class="textHeader">Romain Verwaerde</p>
             <p class="textHeader">Dévellopeur web</p>
         </div>
     </header>
-    <aside class="aside1">
-        <nav class="nav1">
+    <aside>
+        <nav>
             <a class="lienNav te" href="#header001">
                 <img class="imgProfil" src="{{ asset ('../img/frontend/profil.jpg')}}" alt="">
             </a>
@@ -103,52 +86,49 @@
             </section>
         </main>
         <footer>
-                <section class="sectionFooter" id="footer001">
-                                    <strong>
-                                        @lang('labels.frontend.contact.box_title')
-                                    </strong>
-
-                                    {{ html()->form('POST', route('frontend.contact.send'))->open() }}
-
-                                                    {{ html()->label(__('validation.attributes.frontend.last_name'))->for('last_name') }}
-                                                    {{ html()->text('last_name', optional(auth()->user())->last_name)
-                                                        ->class('form-control')
-                                                        ->placeholder(__('validation.attributes.frontend.last_name'))
-                                                        ->attribute('maxlength', 191)
-                                                        ->required()
-                                                        }}
-
-                                                    {{ html()->label(__('validation.attributes.frontend.first_name'))->for('first_name') }}
-                                                    {{ html()->text('first_name', optional(auth()->user())->first_name)
-                                                        ->class('form-control')
-                                                        ->placeholder(__('validation.attributes.frontend.first_name'))
-                                                        ->attribute('maxlength', 191)
-                                                        ->required()
-                                                        }}
-
-                                                    {{ html()->label(__('validation.attributes.frontend.email'))->for('email') }}
-                                                    {{ html()->email('email', optional(auth()->user())->email)
-                                                        ->class('form-control')
-                                                        ->placeholder(__('validation.attributes.frontend.email'))
-                                                        ->attribute('maxlength', 191)
-                                                        ->required() }}
-
-                                                    {{ html()->label(__('validation.attributes.frontend.subject'))->for('subject') }}
-                                                    {{ html()->text('subject')
-                                                        ->class('form-control')
-                                                        ->placeholder(__('validation.attributes.frontend.subject'))
-                                                        ->attribute('maxlength', 191)
-                                                        ->required() }}
-
-                                                    {{ html()->label(__('validation.attributes.frontend.message'))->for('message') }}
-                                                    {{ html()->textarea('message')
-                                                        ->class('form-control')
-                                                        ->placeholder(__('validation.attributes.frontend.message'))
-                                                        ->attribute('rows', 3)
-                                                        ->required() }}
-
-                                                    {{ form_submit(__('labels.frontend.contact.button')) }}
-                <section>
+            <section class="sectionFooter" id="footer001">
+                <h2> Me contacter</h2>
+                <div class="divItem">
+                    {{ html()->form('POST', route('frontend.contact.send'))->open() }}
+                        {{ html()->label(__('validation.attributes.frontend.last_name'))->for('last_name') }}
+                        {{ html()->text('last_name', optional(auth()->user())->last_name)
+                            ->class('form-control')
+                            ->placeholder(__('validation.attributes.frontend.last_name'))
+                            ->attribute('maxlength', 191)
+                            ->required()
+                            }}
+                        {{ html()->label(__('validation.attributes.frontend.first_name'))->for('first_name') }}
+                        {{ html()->text('first_name', optional(auth()->user())->first_name)
+                            ->class('form-control')
+                            ->placeholder(__('validation.attributes.frontend.first_name'))
+                            ->attribute('maxlength', 191)
+                            ->required()
+                            }}
+                        {{ html()->label(__('validation.attributes.frontend.email'))->for('email') }}
+                        {{ html()->email('email', optional(auth()->user())->email)
+                            ->class('form-control')
+                            ->placeholder(__('validation.attributes.frontend.email'))
+                            ->attribute('maxlength', 191)
+                            ->required() }}
+                        {{ html()->label(__('validation.attributes.frontend.subject'))->for('subject') }}
+                        {{ html()->text('subject')
+                            ->class('form-control')
+                            ->placeholder(__('validation.attributes.frontend.subject'))
+                            ->attribute('maxlength', 191)
+                            ->required() }}
+                        {{ html()->label(__('validation.attributes.frontend.message'))->for('message') }}
+                        {{ html()->textarea('message')
+                            ->class('form-control')
+                            ->placeholder(__('validation.attributes.frontend.message'))
+                            ->attribute('rows', 3)
+                            ->required() }}
+                        {{ form_submit(__('labels.frontend.contact.button')) }}
+                    {{ html()->form()->close() }}
+                    </div>
+                    <div class="divItem">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus blanditiis itaque cupiditate doloremque error, fugiat maiores commodi dolores. Repellat voluptas hic harum soluta omnis facilis at incidunt laudantium iure iste!
+                    </div>
+            <section>
         </footer>
     </div>
 @endsection
