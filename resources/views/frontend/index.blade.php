@@ -5,26 +5,43 @@
 
 @section('title', app_name() . ' | ' . __('navs.general.home'))
 @section('content')
+
     <header id="header001">
+        <div class="navbar  fixed-top bg-transparent navbar-expand-sm navInv">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <img class="imgtest" src="{{ asset ('../img/frontend/profil.jpg')}}" alt="">
+            </button>
+            <div class="collapse navbar-collapse p-0" id="navbarTogglerDemo01">
+                <a class="nav-link te d-none d-sm-block te2" href="#">
+                    <img class="imgtest " src="{{ asset ('../img/frontend/profil.jpg')}}" alt="">
+                </a>
+                <ul class="nav nav-burger-link bg-white navbar-nav mt-2 mr-auto d-flex justify-content-between">
+                    <li class="nav-item d-sm-none d-lx-block">
+                    <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link mt-1" href="#presentation">Pésentation</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link mt-1" href="#site">Mes Projets</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link mt-1" href="#footer001">Contact</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <div class="d-flex justify-content-center p-0">
+                            <div class="linkedin mt-1">Linkedin :</div>
+                            <a class="iconLinkedin nav-link mb-2" href="https://www.linkedin.com/in/romain-verwaerde/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                        </div>
+                    </li>
+                    <li class="nav-item d-block d-sm-none">
+                        <a class="iconLinkedin nav-link" href="https://www.linkedin.com/in/romain-verwaerde/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="inv"></div>
         <div class="head1">
-            <div class="navbar navbar-light bg-white testt">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent15">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
             <p class="textHeader">Romain Verwaerde</p>
             <p class="textHeader">Dévellopeur web</p>
         </div>
@@ -48,9 +65,9 @@
     </aside>
 
     <div class="containerMainFooter">
-        <main>
+        <main id="jj">
             <section id="presentation" >
-                <h2>Présentation</h2>
+                <h2 id="jjj">Présentation</h2>
                 <div class="divItem">
                     <h3>Qui suis je</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quis voluptatum? Dolore maiores in sequi incidunt dicta magnam quae amet. Quam cumque voluptate mollitia consequuntur aliquid iure vitae laudantium blanditiis rerum excepturi omnis illo, sed ad voluptas, nemo ipsum consequatur eum quod impedit aliquam sequi nulla? Quos, repudiandae. Asperiores, iste!</p>

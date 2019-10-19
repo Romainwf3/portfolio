@@ -33,3 +33,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+// Rétractation du menu burger au clique
+if (window.matchMedia("(max-width: 575px)").matches) {
+    $('.nav a').on('click', () => $('button.navbar-toggler').click());
+}
+
+//-----
