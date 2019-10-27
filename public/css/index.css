@@ -1,8 +1,12 @@
 html {
     scroll-behavior: smooth;
-    max-width: 100%;
-  }
+    overflow-x: hidden;
+}
 /* BODY */
+
+li a {
+    padding: 0;
+}
 
 header,
 main,
@@ -31,9 +35,14 @@ body,
 aside,
 main,
 footer,
-section{
+img,
+form {
     padding: 0;
 }
+
+/* div {
+    padding-right: 1rem;
+} */
 
 h3,
 h4,
@@ -82,6 +91,14 @@ header {
     text-align: center;
 }
 
+.bordure {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+button:focus {
+    outline: none;
+    }
+
 /* MAIN */
 
 main {
@@ -95,7 +112,7 @@ section {
     flex-wrap: wrap;
     box-sizing: border-box;
     background-color: white;
-    padding: 1rem;
+    padding: 0 1rem 0 0;
 }
 
 h2 {
@@ -108,8 +125,13 @@ h2 {
 
 .divItem {
     flex: 1;
-    flex-basis: 300px;
+    flex-basis: 450px;
     text-align: center;
+    padding: 1rem 0px 1rem 1rem;
+}
+
+.divItem p {
+    text-align: justify;
 }
 
 .imgSite {
@@ -119,7 +141,7 @@ h2 {
 }
 /* FOOTER */
 
-input[type=text] {
+input[type=text], input[type=email], textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -128,9 +150,14 @@ input[type=text] {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+    text-align: center;
 }
 
-input[type=submit] {
+input[type='text']:focus, input[type=email]:focus, textarea:focus{
+    text-align:left;
+    }
+
+/* input[type=submit] {
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
@@ -141,12 +168,12 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #45a049;
-}
+} */
 
 form {
     margin: 1rem;
     border-radius: 5px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
 }
 
 .imgtest {
@@ -163,6 +190,7 @@ form {
 .te2 {
     padding: 8px;
     border-radius: 100%;
+    border: 1px solid transparent;
 }
 
 .nav-link {
@@ -221,6 +249,8 @@ form {
 
 @media screen and (min-width: 800px) and (min-height: 515px) {
 
+    /* Invisibilité de la nav top en dessus de 800px de large et 515 px de haut */
+
     .navInv {
         position: absolute;
         top: -300px;
@@ -230,6 +260,7 @@ form {
 
     .inv {
         min-width: 291px;
+        max-width: 350px;
         background-color: transparent;
         flex : 1;
         flex-basis: 20%;
@@ -250,6 +281,8 @@ form {
         height: 100vh;
         margin-top: -3000px;
         border: 1rem solid transparent;
+        max-width: 350px;
+        border-right: 0;
     }
 
     .imgProfil {
@@ -285,6 +318,7 @@ form {
     }
 
     .lienNav:hover {
+        text-decoration: none;
         background: black;
         color: white;
         width: 227px;
@@ -317,4 +351,29 @@ form {
     #navbarTogglerDemo01 {
         background-color: transparent;
     }
+    .nav-link {
+        line-height: 1;
+    }
+    .navbar {
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+
+    .butP {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        z-index: 1;
+    }
+    .nav-link {
+        margin: 0 auto;
+    }
+    .nav-link:hover {
+        width: 227px;
+    }
+
+    /* .uu {
+        display: none;
+    } */
 }
+
