@@ -1,6 +1,7 @@
 @extends('frontend.layouts.app')
 @section('style')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
+<link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 @endsection
 
