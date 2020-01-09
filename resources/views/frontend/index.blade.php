@@ -60,7 +60,6 @@
             <a class="lienNav" href="#site">Mes Projets</a>
 
             <a class="lienNav" href="#footer001">Contact</a>
-            @include('includes.partials.messages')
 
             <h4>Linkedin :</h4>
             <a class="iconLinkedin lienNav" href="https://www.linkedin.com/in/romain-verwaerde/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
@@ -104,6 +103,7 @@
             <section class="sectionFooter" id="footer001">
                 <h2> Me contacter</h2>
                 <div class="divItem">
+                    @include('includes.partials.messages')
                     {{ html()->form('POST', route('frontend.contact.send'))->open() }}
                         {{-- {{ html()->label(__('validation.attributes.frontend.last_name'))->for('last_name') }} --}}
                         {{ html()->text('last_name', optional(auth()->user())->last_name)
