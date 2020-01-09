@@ -1,6 +1,7 @@
 @extends('frontend.layouts.app')
 @section('style')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 @endsection
 
 @section('title', app_name() . ' | ' . __('navs.general.home'))
@@ -42,8 +43,10 @@
         </div>
         <div class="inv"></div>
         <div class="head1">
-            <p class="textHeader">Romain Verwaerde</p>
-            <p class="textHeader">Dévellopeur web</p>
+            <div class="titre">
+                <p class="textHeader">Romain Verwaerde</p>
+                <p class="textHeader">Développeur web junior Full-stack</p>
+            </div>
         </div>
     </header>
     <aside>
@@ -83,29 +86,17 @@
                     <h3>Formation</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatem quo dolor commodi exercitationem illo soluta sit. Excepturi dolorum ullam, laboriosam eligendi fugit illum eos impedit itaque exercitationem nihil autem unde quas saepe ex aliquid quo officia rerum optio placeat sapiente repudiandae quod? Qui expedita culpa ad perferendis excepturi eos doloribus eum vel? Quidem unde, enim a perspiciatis fuga iure dolorem veritatis perferendis commodi laborum?</p>
                 </div>
-                <div class="divItem">
-                    <h3>Emploi</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A ab id maxime placeat expedita eaque neque et dolores porro est!</p>
-                </div>
-                <div class="divItem">
-                    <h3>Mes spécialitées</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veniam ducimus quidem non earum commodi itaque, exercitationem natus neque tenetur architecto porro deleniti cumque error eos? Laborum doloribus animi modi.</p>
-                </div>
-                <div class="divItem">
-                    <h3>Hobby</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil alias provident voluptas laudantium totam soluta!</p>
-                </div>
             </section>
 
             <section class="siteItem" id="site">
                 <h2>Sites</h2>
                 <div class="divItem divSite">
                     <h3>Zen Et Beauté</h3>
-                    <a href="https://zenetbeaute.dauba.net/" target="_blank"><img class="imgSite" src="{{ asset ('../img/frontend/zenetbeaute.jpg')}}" alt=""></a>
+                    <a href="http://zenetbeaute.verwaerde.website/" target="_blank"><img class="imgSite" src="{{ asset ('../img/frontend/zenetbeaute.jpg')}}" alt=""></a>
                 </div>
                 <div class="divItem divSite">
                     <h3>site</h3>
-                    <a href="https://zenetbeaute.dauba.net/" target="_blank"><img class="imgSite" src="{{ asset ('../img/frontend/zenetbeaute.jpg')}}" alt=""></a>
+                    <a href="http://zenetbeaute.verwaerde.website/" target="_blank"><img class="imgSite" src="{{ asset ('../img/frontend/zenetbeaute.jpg')}}" alt=""></a>
                 </div>
             </section>
         </main>

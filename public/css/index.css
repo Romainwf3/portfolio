@@ -4,6 +4,10 @@ html {
 }
 /* BODY */
 
+body {
+    font-family: 'Source Code Pro', monospace;
+}
+
 li a {
     padding: 0;
 }
@@ -89,6 +93,13 @@ header {
     background-color: transparent;
     flex: 11;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titre {
+    background-color: transparent;
 }
 
 .bordure {
@@ -376,4 +387,3 @@ form {
         display: none;
     } */
 }
-
