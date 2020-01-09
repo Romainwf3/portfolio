@@ -47,7 +47,6 @@ module.exports = function isBuffer (obj) {
     typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
 }
 
-
 /***/ }),
 
 /***/ "./node_modules/process/browser.js":
@@ -117,7 +116,6 @@ function runTimeout(fun) {
         }
     }
 
-
 }
 function runClearTimeout(marker) {
     if (cachedClearTimeout === clearTimeout) {
@@ -142,8 +140,6 @@ function runClearTimeout(marker) {
             return cachedClearTimeout.call(this, marker);
         }
     }
-
-
 
 }
 var queue = [];
@@ -241,7 +237,6 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 process.umask = function() { return 0; };
-
 
 /***/ }),
 
@@ -554,8 +549,6 @@ var staticRenderFns = [
 ]
 render._withStripped = true
 
-
-
 /***/ }),
 
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
@@ -662,7 +655,6 @@ function normalizeComponent (
   }
 }
 
-
 /***/ }),
 
 /***/ "./node_modules/vue/dist/vue.common.dev.js":
@@ -678,7 +670,6 @@ function normalizeComponent (
  * (c) 2014-2019 Evan You
  * Released under the MIT License.
  */
-
 
 /*  */
 
@@ -1048,8 +1039,6 @@ var LIFECYCLE_HOOKS = [
 ];
 
 /*  */
-
-
 
 var config = ({
   /**
@@ -2273,8 +2262,6 @@ function resolveAsset (
 
 /*  */
 
-
-
 function validateProp (
   key,
   propOptions,
@@ -3161,8 +3148,6 @@ function resolveInject (inject, vm) {
 }
 
 /*  */
-
-
 
 /**
  * Runtime helper for resolving raw children VNodes into a slot object.
@@ -5072,8 +5057,6 @@ function queueWatcher (watcher) {
 
 /*  */
 
-
-
 var uid$2 = 0;
 
 /**
@@ -5905,8 +5888,6 @@ function initAssetRegisters (Vue) {
 }
 
 /*  */
-
-
 
 function getComponentName (opts) {
   return opts && (opts.Ctor.options.name || opts.tag)
@@ -7587,8 +7568,6 @@ function wrapFilter (exp, filter) {
 
 /*  */
 
-
-
 /* eslint-disable no-unused-vars */
 function baseWarn (msg, range) {
   console.error(("[Vue compiler]: " + msg));
@@ -7879,8 +7858,6 @@ function genAssignmentCode (
  */
 
 var len, str, chr, index$1, expressionPos, expressionEndPos;
-
-
 
 function parseModel (val) {
   // Fix https://github.com/vuejs/vue/pull/7730
@@ -8327,7 +8304,6 @@ function updateDOMProps (oldVnode, vnode) {
 }
 
 // check platforms/web/util/attrs.js acceptValue
-
 
 function shouldUpdateValue (elm, checkVal) {
   return (!elm.composing && (
@@ -9746,8 +9722,6 @@ var buildRegex = cached(function (delimiters) {
   return new RegExp(open + '((?:.|\\n)+?)' + close, 'g')
 });
 
-
-
 function parseText (
   text,
   delimiters
@@ -10680,8 +10654,6 @@ function processFor (el) {
   }
 }
 
-
-
 function parseFor (exp) {
   var inMatch = exp.match(forAliasRE);
   if (!inMatch) { return }
@@ -11579,10 +11551,6 @@ var baseDirectives = {
 
 /*  */
 
-
-
-
-
 var CodegenState = function CodegenState (options) {
   this.options = options;
   this.warn = options.warn || baseWarn;
@@ -11595,8 +11563,6 @@ var CodegenState = function CodegenState (options) {
   this.staticRenderFns = [];
   this.pre = false;
 };
-
-
 
 function generate (
   ast,
@@ -12126,8 +12092,6 @@ function transformSpecialNewlines (text) {
 
 /*  */
 
-
-
 // these keywords should not appear inside expressions, but operators like
 // typeof, instanceof and in are allowed
 var prohibitedKeywordRE = new RegExp('\\b' + (
@@ -12291,8 +12255,6 @@ function repeat$1 (str, n) {
 }
 
 /*  */
-
-
 
 function createFunction (code, errors) {
   try {
@@ -12627,7 +12589,6 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./vue.common.dev.js */ "./node_modules/vue/dist/vue.common.dev.js")
 }
 
-
 /***/ }),
 
 /***/ "./node_modules/webpack/buildin/global.js":
@@ -12657,7 +12618,6 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
-
 
 /***/ }),
 
@@ -12691,7 +12651,6 @@ module.exports = function(module) {
 	return module;
 };
 
-
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -12718,11 +12677,7 @@ __webpack_require__.r(__webpack_exports__);
  * This bootstrap file is used for both frontend and backend
  */
 
-
-
-
  // Required for BS4
-
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -12778,8 +12733,6 @@ __webpack_require__.r(__webpack_exports__);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-
-
 window.Vue = vue__WEBPACK_IMPORTED_MODULE_2___default.a;
 /**
  * The following block of code may be used to automatically register your
@@ -12802,13 +12755,14 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
   el: '#app'
 }); // Rétractation du menu burger au clique
 
-if (window.matchMedia("(max-width: 575px)").matches) {
-  $('.nav a').on('click', function () {
-    return $('button.navbar-toggler').click();
-  });
-} //-----
+    $('.nav a').click(function () {
+        $('#navbarTogglerDemo01').toggle();
+    });
+    $('button').on('click', function () {
+        $('#navbarTogglerDemo01').toggle()
+    });
 
-/***/ }),
+}),
 
 /***/ "./resources/js/frontend/components/ExampleComponent.vue":
 /*!***************************************************************!*\
@@ -12823,10 +12777,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=script&lang=js& */ "./resources/js/frontend/components/ExampleComponent.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-
-
-
-
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
@@ -12837,7 +12787,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null,
   null
-  
+
 )
 
 /* hot reload */
@@ -12857,7 +12807,7 @@ component.options.__file = "resources/js/frontend/components/ExampleComponent.vu
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/frontend/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
 
@@ -12874,8 +12824,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_13bf442d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_13bf442d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
 
 /***/ }),
 
@@ -12908,7 +12856,6 @@ function addDeleteForms() {
 /**
  * Place any jQuery/helper plugins in here.
  */
-
 
 $(function () {
   /**
@@ -13000,7 +12947,6 @@ $(function () {
 __webpack_require__(/*! C:\laragon\www\portfolio\resources\js\frontend\app.js */"./resources/js/frontend/app.js");
 __webpack_require__(/*! C:\laragon\www\portfolio\resources\sass\frontend\app.scss */"./resources/sass/frontend/app.scss");
 module.exports = __webpack_require__(/*! C:\laragon\www\portfolio\resources\sass\backend\app.scss */"./resources/sass/backend/app.scss");
-
 
 /***/ })
 

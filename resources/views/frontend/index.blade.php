@@ -10,7 +10,7 @@
 
     <header id="header001">
         <div class="navbar fixed-top bg-transparent navbar-expand-sm navInv">
-            <button class="navbar-toggler butP p-2" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler butP p-2" type="button" >
                 <img class="imgtest bordure" src="{{ asset ('../img/frontend/profil.jpg')}}" alt="">
             </button>
             <div class="bordure collapse navbar-collapse p-0" id="navbarTogglerDemo01">
