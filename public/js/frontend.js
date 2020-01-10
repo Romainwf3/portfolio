@@ -12751,15 +12751,15 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('example-component', __webp
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-var app = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
-  el: '#app'
-}); // Rétractation du menu burger au clique
+    var app = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
+        el: '#app'
+    }); // Rétractation du menu burger au clique
 
     $('.nav a').click(function () {
         $('#navbarTogglerDemo01').toggle();
     });
     $('button').on('click', function () {
-        $('#navbarTogglerDemo01').toggle()
+        $('#navbarTogglerDemo01').toggle("fast")
     });
 
 }),
